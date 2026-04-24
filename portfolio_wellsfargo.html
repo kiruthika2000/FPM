@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiruthika Venkatesan — Payments & Fraud Prevention Product Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04060a;--surface:#0a0d14;--surface-2:#11151e;--surface-3:#1a1f2c;--border:#232840;--border-h:#333850;--text:#eeedf4;--text-muted:#6e7088;--wf-red:#d71e28;--wf-red-glow:rgba(215,30,40,0.1);--wf-red-border:rgba(215,30,40,0.22);--wf-red-shadow:0 0 30px rgba(215,30,40,0.06);--wf-gold:#ffcd41;--wf-gold-glow:rgba(255,205,65,0.08);--wf-gold-border:rgba(255,205,65,0.2);--blue:#3b82f6;--blue-glow:rgba(59,130,246,0.08);--green:#22c55e;--green-glow:rgba(34,197,94,0.08);--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:400;line-height:1.7;overflow-x:hidden}::selection{background:var(--wf-red);color:#fff}
+
+.noise{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.015'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+.grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(215,30,40,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(215,30,40,0.015) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 48px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(24px);background:rgba(4,6,10,0.88);border-bottom:1px solid var(--border)}
+nav .logo{font-family:var(--mono);font-size:14px;font-weight:600}nav .logo span{color:var(--wf-red)}nav .logo .g{color:var(--wf-gold)}
+nav ul{list-style:none;display:flex;gap:28px}nav a{color:var(--text-muted);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s}nav a:hover{color:var(--wf-red)}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:140px 48px 80px;max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+.hero-orb1{top:-100px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(215,30,40,0.06) 0%,transparent 70%)}
+.hero-orb2{bottom:-60px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,205,65,0.04) 0%,transparent 70%)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;color:var(--wf-red);background:var(--wf-red-glow);border:1px solid var(--wf-red-border);padding:6px 18px;border-radius:100px;width:fit-content;margin-bottom:28px;box-shadow:var(--wf-red-shadow);position:relative;z-index:1}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--wf-red);box-shadow:0 0 8px var(--wf-red);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(40px,5.5vw,70px);font-weight:800;line-height:1.04;max-width:880px;margin-bottom:28px;letter-spacing:-2.5px;position:relative;z-index:1}
+.hero h1 .rd{background:linear-gradient(135deg,var(--wf-red),#ff4d4d);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1 .gd{background:linear-gradient(135deg,var(--wf-gold),#ffe082);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:16px;color:var(--text-muted);max-width:620px;line-height:1.8;margin-bottom:56px;font-weight:400;position:relative;z-index:1}
+
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden;box-shadow:0 4px 60px rgba(0,0,0,0.4);position:relative;z-index:1}
+.st{background:var(--surface);padding:24px 16px;text-align:center;position:relative}
+.st:first-child{border-radius:16px 0 0 16px}.st:last-child{border-radius:0 16px 16px 0}
+.st::after{content:'';position:absolute;bottom:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,var(--wf-red),transparent);opacity:0.12}
+.st .num{font-family:var(--mono);font-size:28px;font-weight:700;background:linear-gradient(135deg,var(--wf-red),var(--wf-gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.st .lab{font-size:9px;color:var(--text-muted);margin-top:4px;letter-spacing:.8px;text-transform:uppercase}
+
+/* PAYMENT FLOW */
+.pay-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface)}
+.pay-inner{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border)}
+.pay-step{background:var(--surface);padding:20px 14px;text-align:center;position:relative;transition:background .3s}
+.pay-step:hover{background:var(--surface-2)}
+.pay-step::after{content:'→';position:absolute;right:-6px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:11px;color:var(--border);z-index:1}
+.pay-step:last-child::after{display:none}
+.pay-icon{font-size:18px;margin-bottom:4px}
+.pay-label{font-size:12px;font-weight:700;margin-bottom:1px}
+.pay-desc{font-size:8px;color:var(--text-muted);font-family:var(--mono)}
+.pay-step:nth-child(1){border-top:2px solid var(--wf-red)}
+.pay-step:nth-child(2){border-top:2px solid var(--blue)}
+.pay-step:nth-child(3){border-top:2px solid var(--wf-gold)}
+.pay-step:nth-child(4){border-top:2px solid var(--green)}
+.pay-step:nth-child(5){border-top:2px solid var(--wf-red)}
+
+section{padding:100px 48px;max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.chip{font-family:var(--mono);font-size:10px;color:var(--wf-red);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
+.stitle{font-size:clamp(26px,3.5vw,44px);font-weight:800;line-height:1.12;margin-bottom:12px;letter-spacing:-1px}
+.stitle .rd{background:linear-gradient(135deg,var(--wf-red),#ff4d4d);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sdesc{color:var(--text-muted);max-width:540px;font-size:14px;margin-bottom:56px;font-weight:400}
+
+/* CASES */
+.cases{display:flex;flex-direction:column;gap:16px}
+.case{background:linear-gradient(135deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:22px;display:grid;grid-template-columns:280px 1fr;overflow:hidden;transition:all .5s}
+.case:hover{border-color:var(--wf-red-border);transform:translateY(-4px);box-shadow:var(--wf-red-shadow)}
+.cv{display:flex;align-items:center;justify-content:center;position:relative;padding:24px}
+.case:nth-child(1) .cv{background:linear-gradient(160deg,#0c0408,#10080c)}
+.case:nth-child(2) .cv{background:linear-gradient(160deg,#040810,#080c14)}
+.case:nth-child(3) .cv{background:linear-gradient(160deg,#0c0a04,#100e08)}
+.case:nth-child(4) .cv{background:linear-gradient(160deg,#040c08,#08100c)}
+.ctag{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:8px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px}
+.ct1{color:var(--wf-red);background:var(--wf-red-glow);border:1px solid var(--wf-red-border)}
+.ct2{color:var(--blue);background:var(--blue-glow);border:1px solid rgba(59,130,246,0.2)}
+.ct3{color:var(--wf-gold);background:var(--wf-gold-glow);border:1px solid var(--wf-gold-border)}
+.ct4{color:var(--green);background:var(--green-glow);border:1px solid rgba(34,197,94,0.2)}
+.cb{padding:30px;display:flex;flex-direction:column;justify-content:center}
+.cb h3{font-size:19px;font-weight:700;margin-bottom:8px;line-height:1.3;letter-spacing:-.3px}
+.cb p{color:var(--text-muted);font-size:13px;line-height:1.8;margin-bottom:16px;font-weight:400}
+.mts{display:flex;gap:10px;flex-wrap:wrap}
+.mt{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;transition:border-color .3s}
+.mt:hover{border-color:var(--wf-red-border)}
+.mt strong{display:block;font-family:var(--mono);font-size:17px;font-weight:600}
+.mt.m1 strong{color:var(--wf-red)}.mt.m2 strong{color:var(--blue)}.mt.m3 strong{color:var(--wf-gold)}.mt.m4 strong{color:var(--green)}
+.mt span{font-size:9px;color:var(--text-muted);letter-spacing:.3px}
+
+/* EXPERIENCE */
+.exp-bg{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1}
+.exp-bg>div{max-width:1200px;margin:0 auto;padding:100px 48px}
+.tl{position:relative;padding-left:40px}
+.tl::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--wf-red),var(--wf-gold),var(--border))}
+.tli{position:relative;margin-bottom:34px}.tli:last-child{margin-bottom:0}
+.tli::before{content:'';position:absolute;left:-40px;top:6px;width:18px;height:18px;border-radius:50%;border:2px solid var(--wf-red);background:var(--bg)}
+.tli.on::before{background:var(--wf-red);box-shadow:0 0 14px rgba(215,30,40,0.35)}
+.tlh{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.tlt{font-size:14px;font-weight:700;letter-spacing:-.2px}.tlc{color:var(--wf-red);font-weight:500}
+.tld{font-family:var(--mono);font-size:10px;color:var(--text-muted)}
+.tlu{list-style:none;padding:0}.tlu li{color:var(--text-muted);font-size:12px;line-height:1.75;margin-bottom:5px;padding-left:18px;position:relative;font-weight:400}
+.tlu li::before{content:'→';position:absolute;left:0;color:var(--wf-red);opacity:0.35}
+
+/* APPROACH */
+.ag{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ac{background:linear-gradient(135deg,var(--surface-2),var(--surface));border:1px solid var(--border);border-radius:18px;padding:34px;transition:all .4s;position:relative;overflow:hidden}
+.ac:hover{border-color:var(--wf-red-border);transform:translateY(-3px);box-shadow:var(--wf-red-shadow)}
+.ac::before{content:attr(data-n);position:absolute;top:-14px;right:18px;font-family:var(--mono);font-size:90px;font-weight:800;color:var(--surface-3);line-height:1;pointer-events:none}
+.ac::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s}
+.ac:nth-child(1)::after{background:linear-gradient(90deg,transparent,var(--wf-red),transparent)}
+.ac:nth-child(2)::after{background:linear-gradient(90deg,transparent,var(--wf-gold),transparent)}
+.ac:nth-child(3)::after{background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.ac:hover::after{opacity:0.4}
+.ac h3{font-size:15px;font-weight:700;margin-bottom:8px;position:relative;z-index:1}
+.ac p{font-size:12.5px;color:var(--text-muted);line-height:1.8;font-weight:400;position:relative;z-index:1}
+
+/* TECH */
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tp{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 14px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
+.tp:hover{border-color:var(--wf-red-border);transform:translateY(-2px)}
+.tp::after{content:'';position:absolute;top:0;left:25%;right:25%;height:1px;background:var(--wf-red);opacity:0;transition:opacity .3s}
+.tp:hover::after{opacity:0.3}
+.tp .tn{font-size:12px;font-weight:600;margin-bottom:3px}.tp .tc{font-family:var(--mono);font-size:8px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase}
+
+/* EDU */
+.eg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ec{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;transition:all .3s}
+.ec:hover{border-color:var(--wf-red-border)}
+.ec .es{font-size:17px;font-weight:700;margin-bottom:3px}.ec .ed{font-size:12px;color:var(--text-muted);margin-bottom:8px}
+.ec .em{display:flex;justify-content:space-between}.ec .gp{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--green)}.ec .dt{font-family:var(--mono);font-size:10px;color:var(--text-muted)}
+.certs{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.cert{font-family:var(--mono);font-size:10px;color:var(--text-muted);background:var(--surface-2);border:1px solid var(--border);padding:5px 12px;border-radius:100px;transition:all .3s}
+.cert:hover{border-color:var(--wf-red-border);color:var(--wf-red)}
+
+.contact{text-align:center;padding:130px 48px;position:relative;z-index:1}
+.contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(215,30,40,0.04) 0%,transparent 60%);pointer-events:none}
+.contact h2{font-size:clamp(30px,5vw,54px);font-weight:800;margin-bottom:12px;letter-spacing:-1.5px;position:relative}
+.contact h2 .rd{background:linear-gradient(135deg,var(--wf-red),#ff4d4d);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cls{display:flex;gap:16px;justify-content:center;margin-top:30px;position:relative}
+.cls a{color:var(--text);text-decoration:none;font-size:12px;font-weight:500;padding:14px 36px;border:1px solid var(--border);border-radius:100px;transition:all .4s}
+.cls a:hover{border-color:var(--wf-red);color:var(--wf-red);box-shadow:var(--wf-red-shadow)}
+footer{text-align:center;padding:30px;border-top:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--text-muted);position:relative;z-index:1}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}.fade{animation:fadeUp .8s ease forwards}.d1{animation-delay:.1s;opacity:0}.d2{animation-delay:.2s;opacity:0}.d3{animation-delay:.3s;opacity:0}.d4{animation-delay:.4s;opacity:0}
+@media(max-width:768px){nav{padding:14px 20px}nav ul{display:none}section,.hero,.exp-bg>div{padding-left:20px;padding-right:20px}.case{grid-template-columns:1fr}.cv{height:170px}.ag,.tg{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}.eg{grid-template-columns:1fr}.pay-inner{grid-template-columns:repeat(3,1fr)}.pay-step::after{display:none}.hero-orb1,.hero-orb2{display:none}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="grid-bg"></div>
+
+<nav><div class="logo">K<span>.</span><span class="g">V</span></div><ul><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#approach">Approach</a></li><li><a href="#stack">Expertise</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+
+<div class="hero">
+<div class="hero-orb hero-orb1"></div><div class="hero-orb hero-orb2"></div>
+<div class="hero-badge fade d1"><div class="dot"></div> Payments &middot; Fraud Prevention &middot; Regulatory Compliance</div>
+<h1 class="fade d2">I own <span class="rd">payment product roadmaps</span> where fraud prevention and customer experience <span class="gd">aren't trade-offs</span>.</h1>
+<p class="hero-sub fade d3">5+ years managing wire transfers, inter-bank transfers (ACH, instant payments), and digital deposit products in financial services. I lead fraud and scam prevention while ensuring every product strategy complies with Regulation E, UDAP, and internal risk standards.</p>
+<div class="stats fade d4">
+<div class="st"><div class="num">5+</div><div class="lab">Years payments PM</div></div>
+<div class="st"><div class="num">2.8M</div><div class="lab">Txn / month</div></div>
+<div class="st"><div class="num">41%</div><div class="lab">Fraud loss reduced</div></div>
+<div class="st"><div class="num">93%</div><div class="lab">Detection accuracy</div></div>
+<div class="st"><div class="num">89%</div><div class="lab">Product adoption</div></div>
+</div></div>
+
+<!-- PAYMENT FLOW -->
+<div class="pay-bar"><div class="pay-inner">
+<div class="pay-step"><div class="pay-icon" style="color:var(--wf-red)">🔐</div><div class="pay-label">Authenticate</div><div class="pay-desc">identity + risk</div></div>
+<div class="pay-step"><div class="pay-icon" style="color:var(--blue)">📤</div><div class="pay-label">Initiate</div><div class="pay-desc">wire / ACH / deposit</div></div>
+<div class="pay-step"><div class="pay-icon" style="color:var(--wf-gold)">🛡️</div><div class="pay-label">Screen</div><div class="pay-desc">fraud detection</div></div>
+<div class="pay-step"><div class="pay-icon" style="color:var(--green)">✓</div><div class="pay-label">Process</div><div class="pay-desc">settle + confirm</div></div>
+<div class="pay-step"><div class="pay-icon" style="color:var(--wf-red)">📊</div><div class="pay-label">Monitor</div><div class="pay-desc">Reg E + UDAP</div></div>
+</div></div>
+
+<!-- CASES -->
+<section id="work">
+<div class="chip">Selected work</div>
+<h2 class="stitle">Four payment products I <span class="rd">owned end-to-end</span>.</h2>
+<p class="sdesc">Each product balanced revenue, customer experience, and fraud risk — with full regulatory compliance across Regulation E and UDAP.</p>
+<div class="cases">
+
+<div class="case"><div class="cv"><div class="ctag ct1">FRAUD</div><svg width="230" height="170" viewBox="0 0 230 170"><rect x="15" y="12" width="200" height="40" rx="6" fill="none" stroke="#d71e28" stroke-width="0.5" opacity="0.3"/><text x="115" y="30" font-size="8" fill="#d71e28" text-anchor="middle" font-family="monospace" opacity="0.8">fraud detection engine</text><text x="115" y="44" font-size="7" fill="#6e7088" text-anchor="middle" font-family="monospace">14 risk signals · real-time</text><line x1="115" y1="57" x2="115" y2="72" stroke="#6e7088" stroke-width="0.5"/><rect x="20" y="78" width="58" height="30" rx="5" fill="#d71e28" opacity="0.06" stroke="#d71e28" stroke-width="0.4"/><text x="49" y="97" font-size="7" fill="#d71e28" text-anchor="middle" font-family="monospace" opacity="0.8">wire fraud</text><rect x="86" y="78" width="58" height="30" rx="5" fill="#3b82f6" opacity="0.06" stroke="#3b82f6" stroke-width="0.4"/><text x="115" y="97" font-size="7" fill="#3b82f6" text-anchor="middle" font-family="monospace" opacity="0.8">ACH unauth</text><rect x="152" y="78" width="60" height="30" rx="5" fill="#ffcd41" opacity="0.06" stroke="#ffcd41" stroke-width="0.4"/><text x="182" y="97" font-size="7" fill="#ffcd41" text-anchor="middle" font-family="monospace" opacity="0.8">deposit scam</text><text x="115" y="135" font-size="9" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.6">93% accuracy · 41% loss reduction</text><text x="115" y="155" font-size="8" fill="#6e7088" text-anchor="middle" font-family="monospace">$4.2M fraud prevented</text></svg></div><div class="cb"><h3>Fraud & scam prevention across all payment types</h3><p>Led fraud and scam prevention and detection for wire transfers, ACH inter-bank transfers, and mobile deposits. Built AI-powered detection tracking 14 risk signals in real time. Ensured compliance with Regulation E and UDAP. Partnered with Risk Management, Operations, and Legal.</p><div class="mts"><div class="mt m1"><strong>93%</strong><span>Detection accuracy</span></div><div class="mt m4"><strong>41%</strong><span>Fraud loss reduced</span></div><div class="mt m3"><strong>$4.2M</strong><span>Fraud prevented</span></div></div></div></div>
+
+<div class="case"><div class="cv"><div class="ctag ct2">WIRES</div><svg width="230" height="170" viewBox="0 0 230 170"><rect x="20" y="18" width="80" height="40" rx="5" fill="none" stroke="#3b82f6" stroke-width="0.4" opacity="0.25"/><text x="60" y="36" font-size="8" fill="#3b82f6" text-anchor="middle" font-family="monospace" opacity="0.7">sender</text><text x="60" y="50" font-size="7" fill="#6e7088" text-anchor="middle" font-family="monospace">routing + SWIFT</text><text x="118" y="40" font-size="14" fill="#3b82f6" opacity="0.4">→</text><rect x="135" y="18" width="75" height="40" rx="5" fill="#22c55e" opacity="0.04" stroke="#22c55e" stroke-width="0.4"/><text x="172" y="36" font-size="8" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.7">recipient</text><text x="172" y="50" font-size="7" fill="#6e7088" text-anchor="middle" font-family="monospace">verified</text><rect x="40" y="78" width="150" height="34" rx="5" fill="#3b82f6" opacity="0.03" stroke="#3b82f6" stroke-width="0.4"/><text x="115" y="96" font-size="8" fill="#3b82f6" text-anchor="middle" font-family="monospace" opacity="0.6">real-time tracking + explainability</text><text x="115" y="106" font-size="7" fill="#6e7088" text-anchor="middle" font-family="monospace">#1 user request</text><text x="115" y="140" font-size="9" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.5">completion 64% → 88%</text><text x="115" y="158" font-size="8" fill="#6e7088" text-anchor="middle" font-family="monospace">NPS: +22 → +51</text></svg></div><div class="cb"><h3>Wire transfer product: roadmap, tracking, and completion</h3><p>Owned end-to-end product roadmap for wire transfers across all channels. Shipped real-time payment tracking and status explainability. Discovered 43% of users couldn't trace transfer status. Designed intelligent bank lookup auto-populating routing and SWIFT codes. Multi-channel delivery (online, mobile, branch).</p><div class="mts"><div class="mt m2"><strong>64→88%</strong><span>Wire completion</span></div><div class="mt m1"><strong>+22→+51</strong><span>NPS lift</span></div><div class="mt m3"><strong>#1</strong><span>Feature shipped</span></div></div></div></div>
+
+<div class="case"><div class="cv"><div class="ctag ct3">TRANSFERS</div><svg width="230" height="170" viewBox="0 0 230 170"><rect x="25" y="15" width="75" height="34" rx="5" fill="#ffcd41" opacity="0.05" stroke="#ffcd41" stroke-width="0.4"/><text x="62" y="30" font-size="7" fill="#ffcd41" text-anchor="middle" font-family="monospace" opacity="0.7">ACH</text><text x="62" y="42" font-size="7" fill="#6e7088" text-anchor="middle" font-family="monospace">batch · T+1</text><rect x="130" y="15" width="75" height="34" rx="5" fill="#22c55e" opacity="0.05" stroke="#22c55e" stroke-width="0.4"/><text x="167" y="30" font-size="7" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.7">instant</text><text x="167" y="42" font-size="7" fill="#6e7088" text-anchor="middle" font-family="monospace">real-time</text><line x1="115" y1="55" x2="115" y2="72" stroke="#6e7088" stroke-width="0.5"/><rect x="35" y="78" width="160" height="34" rx="5" fill="#d71e28" opacity="0.04" stroke="#d71e28" stroke-width="0.4"/><text x="115" y="92" font-size="7" fill="#d71e28" text-anchor="middle" font-family="monospace" opacity="0.7">Regulation E dispute automation</text><text x="115" y="106" font-size="7" fill="#6e7088" text-anchor="middle" font-family="monospace">10-day provisional credit</text><text x="115" y="138" font-size="8" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.5">8 days → 18 hours resolution</text><text x="115" y="155" font-size="8" fill="#6e7088" text-anchor="middle" font-family="monospace">100% Reg E compliance</text></svg></div><div class="cb"><h3>Inter-bank transfers: ACH + instant payments + Reg E compliance</h3><p>Owned roadmap for inter-bank transfers across ACH and instant payment rails. Designed Regulation E dispute resolution workflow automating the 10-business-day provisional credit requirement. Reduced dispute processing from 8 days to 18 hours. Ensured 100% Regulation E timeline compliance across all channels.</p><div class="mts"><div class="mt m3"><strong>8d→18hr</strong><span>Dispute resolution</span></div><div class="mt m4"><strong>100%</strong><span>Reg E compliance</span></div><div class="mt m1"><strong>52%</strong><span>Fewer complaints</span></div></div></div></div>
+
+<div class="case"><div class="cv"><div class="ctag ct4">VALUE</div><svg width="230" height="170" viewBox="0 0 230 170"><circle cx="70" cy="55" r="28" fill="none" stroke="#22c55e" stroke-width="0.4" opacity="0.2"/><text x="70" y="50" font-size="8" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.7">revenue</text><text x="70" y="62" font-size="7" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.5">+ CX</text><circle cx="160" cy="55" r="28" fill="none" stroke="#d71e28" stroke-width="0.4" opacity="0.2"/><text x="160" y="50" font-size="8" fill="#d71e28" text-anchor="middle" font-family="monospace" opacity="0.7">fraud</text><text x="160" y="62" font-size="7" fill="#d71e28" text-anchor="middle" font-family="monospace" opacity="0.5">- risk</text><path d="M98 55 L132 55" stroke="#eeedf4" stroke-width="0.4" stroke-dasharray="3 3" opacity="0.15"/><text x="115" y="52" font-size="7" fill="#ffcd41" text-anchor="middle" font-family="monospace" opacity="0.6">balance</text><text x="115" y="110" font-size="9" fill="#22c55e" text-anchor="middle" font-family="monospace" opacity="0.5">$7.8M revenue + 41% less fraud</text><text x="115" y="130" font-size="8" fill="#6e7088" text-anchor="middle" font-family="monospace">value-based analysis</text><text x="115" y="150" font-size="8" fill="#6e7088" text-anchor="middle" font-family="monospace">12 QBRs to leadership</text></svg></div><div class="cb"><h3>Value-based analysis: optimizing revenue, CX, and fraud risk</h3><p>Performed value-based analysis across all payment types to optimize revenue and customer experience while minimizing fraud, scam risk, and operational losses. Continuously assessed demand against capacity. Proactively reprioritized roadmap. Delivered strategic storytelling to senior leadership through 12 quarterly business reviews.</p><div class="mts"><div class="mt m4"><strong>$7.8M</strong><span>Revenue impact</span></div><div class="mt m1"><strong>2.8M</strong><span>Monthly txns</span></div><div class="mt m2"><strong>12</strong><span>QBRs delivered</span></div></div></div></div>
+
+</div></section>
+
+<!-- EXPERIENCE -->
+<div class="exp-bg" id="experience"><div>
+<div class="chip">Experience</div>
+<h2 class="stitle">Where I owned <span class="rd">payment product roadmaps</span>.</h2>
+<p class="sdesc">Progressive ownership from payment analytics to leading fraud prevention and multi-channel wire/transfer/deposit products.</p>
+<div class="tl">
+<div class="tli on"><div class="tlh"><div><span class="tlt">Lead Digital PM – Payments & Fraud Prevention</span> <span class="tlc">@ FINRA</span></div><span class="tld">May 2025 – Dec 2025</span></div><ul class="tlu">
+<li>Owned roadmap for wires, inter-bank transfers, digital deposits — adoption 62%→89%</li>
+<li>Led fraud & scam prevention: AI detection, 14 risk signals, 93% accuracy, 41% loss reduction</li>
+<li>Regulation E + UDAP compliance; partnered with Risk Management, Operations, Legal</li>
+<li>Value-based analysis: revenue + CX + fraud risk; demand vs capacity; strategic storytelling</li>
+</ul></div>
+<div class="tli on"><div class="tlh"><div><span class="tlt">Senior Digital PM – Payments Platform & Risk Management</span> <span class="tlc">@ Cognizant</span></div><span class="tld">Jul 2021 – Aug 2024</span></div><ul class="tlu">
+<li>Payment platform for 12 F500 retail banking clients — 2.8M txn/mo; wire + ACH + instant; $7.8M impact</li>
+<li>Fraud prevention: real-time monitoring, unauthorized transfers, scam detection; losses reduced 34%</li>
+<li>Agile roadmap across interdependent partners; 6 squads; demand vs capacity; NPS +22→+51</li>
+<li>Stakeholder engagement: Technology, Digital, Operations, Risk, Legal; 12 QBRs; strategic storytelling</li>
+<li>Payment tracking & explainability across wire + ACH; transfer completion 51%→68%</li>
+</ul></div>
+<div class="tli"><div class="tlh"><div><span class="tlt">Associate Digital PM – Payment Analytics & Operations</span> <span class="tlc">@ Cognizant</span></div><span class="tld">Jun 2020 – Jul 2021</span></div><ul class="tlu">
+<li>SQL + Tableau dashboards: wire volume, ACH rates, fraud metrics; 61% ticket reduction in 1 sprint</li>
+<li>20+ user sessions; fraud pattern analysis; Reg E compliance; presented to executive leadership</li>
+</ul></div>
+</div></div></div>
+
+<!-- APPROACH -->
+<section id="approach">
+<div class="chip">How I work</div>
+<h2 class="stitle">Three rules for <span class="rd">payment product management</span>.</h2>
+<div class="ag">
+<div class="ac" data-n="01"><h3>Fraud prevention is a product, not a filter</h3><p>I don't bolt fraud detection on at the end. I design it into the payment flow from day one — 14 risk signals evaluated in real time before a wire is approved. 93% accuracy means real fraud gets caught. But equally important: legitimate payments don't get blocked. False positives are product failures too.</p></div>
+<div class="ac" data-n="02"><h3>Regulation E is a feature spec</h3><p>The 10-business-day provisional credit timeline isn't a legal annoyance — it's a product requirement. I translate regulatory mandates into engineering tickets. When the dispute workflow takes 8 days and the law says 10, I don't celebrate. I automate it to 18 hours and make the customer feel protected, not processed.</p></div>
+<div class="ac" data-n="03"><h3>Value = revenue + CX − fraud risk</h3><p>Every roadmap decision is a three-variable equation. More aggressive fraud screening reduces losses but also blocks legitimate transfers. I use value-based analysis to find the optimal point — and I present that trade-off to leadership with strategic storytelling, not just spreadsheets.</p></div>
+</div></section>
+
+<!-- TECH -->
+<section id="stack">
+<div class="chip">Domain expertise</div>
+<h2 class="stitle">From <span class="rd">wire initiation</span> to <span class="rd">fraud resolution</span>.</h2>
+<div class="tg">
+<div class="tp"><div class="tn">Wire Transfers</div><div class="tc">payments</div></div>
+<div class="tp"><div class="tn">ACH / Instant</div><div class="tc">payments</div></div>
+<div class="tp"><div class="tn">Mobile Deposit</div><div class="tc">payments</div></div>
+<div class="tp"><div class="tn">Digital Funding</div><div class="tc">payments</div></div>
+<div class="tp"><div class="tn">Fraud Detection</div><div class="tc">risk</div></div>
+<div class="tp"><div class="tn">Scam Prevention</div><div class="tc">risk</div></div>
+<div class="tp"><div class="tn">Regulation E</div><div class="tc">compliance</div></div>
+<div class="tp"><div class="tn">UDAP</div><div class="tc">compliance</div></div>
+<div class="tp"><div class="tn">Agile Roadmap</div><div class="tc">product</div></div>
+<div class="tp"><div class="tn">Value Analysis</div><div class="tc">product</div></div>
+<div class="tp"><div class="tn">SQL / Tableau</div><div class="tc">analytics</div></div>
+<div class="tp"><div class="tn">JIRA</div><div class="tc">execution</div></div>
+<div class="tp"><div class="tn">Risk Mgmt</div><div class="tc">stakeholder</div></div>
+<div class="tp"><div class="tn">Operations</div><div class="tc">stakeholder</div></div>
+<div class="tp"><div class="tn">Legal</div><div class="tc">stakeholder</div></div>
+<div class="tp"><div class="tn">Strategic Story</div><div class="tc">communication</div></div>
+</div></section>
+
+<!-- EDUCATION -->
+<section id="education">
+<div class="chip">Education & certifications</div>
+<h2 class="stitle">The <span class="rd">foundation</span>.</h2>
+<div class="eg">
+<div class="ec"><div class="es">University of Denver</div><div class="ed">M.S. Information Technology</div><div class="em"><span class="gp">3.97 / 4.0</span><span class="dt">2024 – 2026</span></div></div>
+<div class="ec"><div class="es">Anna University</div><div class="ed">B.E. Computer Science</div><div class="em"><span class="gp">3.8 / 4.0</span><span class="dt">2017 – 2021</span></div></div>
+</div>
+<div class="certs">
+<span class="cert">Salesforce AI Associate</span>
+<span class="cert">AWS Cloud Practitioner</span>
+<span class="cert">Salesforce Admin (ADM 201)</span>
+<span class="cert">Salesforce App Builder</span>
+<span class="cert">GitLab CI/CD</span>
+</div></section>
+
+<!-- CONTACT -->
+<div class="contact" id="contact">
+<h2>Let's build <span class="rd">payment products</span><br>where fraud prevention meets customer trust.</h2>
+<p style="color:var(--text-muted);margin-top:8px;position:relative;font-size:14px">Hybrid-ready in San Francisco.</p>
+<div class="cls">
+<a href="mailto:kiruthikavenkat2704@gmail.com">kiruthikavenkat2704@gmail.com</a>
+<a href="tel:+17208135590">(720) 813-5590</a>
+</div></div>
+
+<footer>&copy; 2026 Kiruthika Venkatesan</footer>
+</body></html>
